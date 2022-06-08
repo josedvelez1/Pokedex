@@ -11,18 +11,17 @@ const UserInput = () => {
     const dispatch = useDispatch();
 
     const getName = () => {
-        console.log(userName)
         dispatch(changeUser(userName));
         navigate("/pokedex")
     }
 
 
     return (
-        <div>
+        <form>
             <h1>UserInput</h1>
             <input type="text" value={userName} onChange={e => setUserName(e.target.value)} />
             <button onClick={getName}>Enviar</button>
-        </div>
+        </form>
     );
 };
 

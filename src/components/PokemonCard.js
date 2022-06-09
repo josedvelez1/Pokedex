@@ -11,9 +11,7 @@ const PokemonCard = ({pokemonUrl}) => {
     useEffect(() => {
         axios.get(pokemonUrl)
             .then(res => setPokemon(res.data))
-    }, [])
-
-    console.log(pokemon)
+    }, [pokemonUrl])
 
     
     const types = () => {
@@ -34,7 +32,7 @@ const PokemonCard = ({pokemonUrl}) => {
             <h3>Stats</h3>
             <p><small><i>{pokemon.stats?.[0].stat.name} {pokemon.stats?.[0].base_stat} / {pokemon.stats?.[1].stat.name} {pokemon.stats?.[1].base_stat}</i></small></p>
             <p><small><i>{pokemon.stats?.[2].stat.name} {pokemon.stats?.[2].base_stat} / {pokemon.stats?.[5].stat.name} {pokemon.stats?.[5].base_stat}</i></small></p>
-            <div className="font-red"></div>
+            <div className="font-red"></div>|
         </div>
     ); 
 };

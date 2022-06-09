@@ -23,8 +23,6 @@ const Pokedex = () => {
 
     }, [])
 
-    console.log(characters)
-
 
     const search = () => {
         navigate(`/pokedex/${pokemonSearch}`)
@@ -69,7 +67,7 @@ const Pokedex = () => {
                 </form>
                 <select className='types' onChange={filterPokemonType}>
                     {
-                        pokemonType.map((pokemon) => (
+                        pokemonType.map( pokemon => (
                             <option key={pokemon.url} value={pokemon.url}>{pokemon.name} </option>
                         ))
                     }

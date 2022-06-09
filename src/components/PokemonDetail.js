@@ -11,9 +11,7 @@ const PokemonDetail = () => {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`) 
             .then(res => setPokemon(res.data) )
-    }, [])
-
-    console.log(pokemon)
+    }, [id])
 
     const types = () => {
         let arrTypes = []
@@ -32,9 +30,6 @@ const PokemonDetail = () => {
         const resultAbilities = arrAbilities.join(' / ')
         return resultAbilities
     }
-
-    console.log(pokemon)
-
 
     return (
         <div>

@@ -226,6 +226,7 @@ body{
   margin-right: auto;
   border: 1px solid black;
   box-shadow: 5px 3px 3px rgba(0, 0, 0, .3);
+  padding-right: 1rem;
 }
 
 .movements-list{

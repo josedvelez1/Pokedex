@@ -59,7 +59,7 @@ const PokemonDetail = () => {
                             pokemon.stats?.map( stat =>(
                                 <li key={stat.stat.url}>
                                     <label htmlFor="pokerbar">{stat.stat.name}</label>
-                                    <progress id="pokebar" max="150" value={stat.base_stat} className='prog'>{stat.base_stat}</progress>
+                                    <progress id="pokebar" max="100" value={stat.base_stat} className='prog'>{stat.base_stat}</progress>
                                 </li>
                             ))
                         }

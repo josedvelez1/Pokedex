@@ -70,7 +70,7 @@ const Pokedex = () => {
                 <select className='types' onChange={filterPokemonType}>
                     {
                         pokemonType.map((pokemon) => (
-                            <option value={pokemon.url}>{pokemon.name} </option>
+                            <option key={pokemon.url} value={pokemon.url}>{pokemon.name} </option>
                         ))
                     }
                 </select>

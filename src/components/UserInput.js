@@ -28,7 +28,7 @@ const UserInput = () => {
                 <p>let's start with your name</p>
                 <input className='input' type="text" value={userName} onChange={e => setUserName(e.target.value)} />
                 <button className='input-btt' onClick={getName}>
-                    <i class="fa-solid fa-paper-plane"></i>
+                    <i className="fa-solid fa-paper-plane"></i>
                 </button>
             </form>
             <img className='gift-input' src="https://www.gifsanimados.org/data/media/1446/pokemon-imagen-animada-0082.gif" alt="" />

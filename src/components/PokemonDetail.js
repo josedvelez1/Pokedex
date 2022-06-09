@@ -47,6 +47,7 @@ const PokemonDetail = () => {
                         <img className='img-home' src={pokemon.sprites?.other.home.front_default} alt="" />
                     </div>
                     <h1>{pokemon.name}</h1>
+                    <h2>#{id}</h2>
                     <p><b>Types: </b>{types()}</p>
                     <p><b>Abilities: </b>{abilities()}</p>
                     <p><b>height: </b>{pokemon.height}</p>

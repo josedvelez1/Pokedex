@@ -63,7 +63,7 @@ const Pokedex = () => {
                     />
                     <div className='btt-div'>
                         <button className='btt-pokemon' onClick={search} >
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
                 </form>

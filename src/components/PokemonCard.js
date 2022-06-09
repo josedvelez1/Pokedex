@@ -13,11 +13,28 @@ const PokemonCard = ({pokemonUrl}) => {
             .then(res => setPokemon(res.data))
     }, [])
 
+    console.log(pokemon)
+
+    
+    const types = () => {
+        let arrTypes = []
+        for (let i = 0; i <= pokemon.types?.length - 1; i++){
+            arrTypes.push(pokemon.types[i]?.type.name)
+        }
+        const resultTypes = arrTypes.join(' / ')
+        return resultTypes
+    }
+
 
     return (
         <div className='card' onClick={() => navigate(`/pokedex/${pokemon.id}`)}>
-            <h3>{pokemon.name}</h3>
             <img src={pokemon.sprites?.front_default} alt="" />
+            <h2>{pokemon.name}</h2>
+            <p><b>Types: </b>{types()}</p>
+            <h3>Stats</h3>
+            <p><small><i>{pokemon.stats?.[0].stat.name} {pokemon.stats?.[0].base_stat} / {pokemon.stats?.[1].stat.name} {pokemon.stats?.[1].base_stat}</i></small></p>
+            <p><small><i>{pokemon.stats?.[2].stat.name} {pokemon.stats?.[2].base_stat} / {pokemon.stats?.[5].stat.name} {pokemon.stats?.[5].base_stat}</i></small></p>
+            <div className="font-red"></div>
         </div>
     ); 
 };
